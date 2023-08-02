@@ -15,7 +15,7 @@ export const commentsSlice = createSlice({
       state.comments.push({ text: action.payload, id: state.comments.length });
     },
     remove: (state, action: PayloadAction<number>) => {
-      state.comments = state.comments.filter((c) => c.id === action.payload);
+      state.comments = state.comments.filter((c) => c.id != action.payload);
     },
   },
 });
