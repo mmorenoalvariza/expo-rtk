@@ -32,7 +32,7 @@ function Home({ navigation }: Props) {
           >
             <Input
               mx="3"
-              placeholder="Input"
+              placeholder="Type a comment"
               type="text"
               w="100%"
               style={styles.input}
