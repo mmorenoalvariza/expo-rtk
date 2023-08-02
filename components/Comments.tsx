@@ -1,19 +1,24 @@
-import { HStack, VStack, View } from "native-base";
-import { Text } from "react-native";
+import { Container, HStack, VStack, Text } from "native-base";
+//import { Text } from "react-native";
 import { FunctionComponent } from "react";
 
 type Props = {
   comments: { id: number; text: string }[];
 };
 const Comments: FunctionComponent<Props> = ({ comments }) => {
-  console.log("DDD", comments);
   return (
-    <VStack>
-      <Text>COMMENTS:</Text>
-      <Text>{comments[0].text}</Text>
-      {comments.map((c) => {
-        <Text>{c.text}</Text>;
-      })}
+    <VStack space={2}>
+      {comments.map((c) => (
+        <Container
+          key={c.id}
+          bg={"light.200"}
+          padding={5}
+          borderRadius={3}
+          borderBottomColor={"#fff"}
+        >
+          <Text>{c.text}</Text>
+        </Container>
+      ))}
     </VStack>
   );
 };

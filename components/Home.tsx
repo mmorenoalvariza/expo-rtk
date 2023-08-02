@@ -2,7 +2,7 @@ import { StatusBar } from "expo-status-bar";
 import { Image, StyleSheet, Text, View, Pressable, Button } from "react-native";
 import { Box, Center, Input, VStack } from "native-base";
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
-import { RootStackParamList } from "../App";
+import { RootStackParamList } from "./NavigationComponent";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { add } from "../features/comments/commentsSlice";

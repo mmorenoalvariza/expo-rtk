@@ -1,6 +1,6 @@
 import { Image, StyleSheet, Text, View, Pressable, Button } from "react-native";
 import type { NativeStackScreenProps } from "@react-navigation/native-stack";
-import { RootStackParamList } from "../App";
+import { RootStackParamList } from "./NavigationComponent";
 import { useSelector } from "react-redux";
 import { RootState } from "../store";
 import { HStack } from "native-base";
@@ -10,7 +10,13 @@ function DetailsScreen({ navigation, route }: Props) {
   const comments = useSelector((state: RootState) => state.comments.comments);
   const { id, name } = route.params;
   return (
-    <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
+    <View
+      style={{
+        flex: 1,
+        alignItems: "center",
+        justifyContent: "space-around",
+      }}
+    >
       <Text>
         Details Screen for {id} {name}
       </Text>
