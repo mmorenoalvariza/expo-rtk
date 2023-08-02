@@ -11,6 +11,9 @@ const Comments: FunctionComponent<Props> = ({ comments }) => {
 
   return (
     <VStack space={2}>
+      <Text bold fontSize={"lg"}>
+        Comments:
+      </Text>
       {comments.map((c) => (
         <Container
           key={c.id}
